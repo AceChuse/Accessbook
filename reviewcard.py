@@ -57,12 +57,6 @@ class ReviewCards(LearnNewCards):
         writer.sheets['Sheet1'].set_column('D:E', 8)
         writer.sheets['Sheet1'].set_column('F:F', 16)
 
-    def label_5_setText(self, **kwargs):
-        date = kwargs.get('date')
-        if date is None: kwargs['time'] = kwargs['time'].strftime('%Y/%m/%d %H:%M:%S')
-        else: kwargs['date'] = date.strftime('%Y/%m/%d %H:%M:%S')
-        self.label_5.setText(str(kwargs))
-
     def dealResult(self, correct, score, if_pass=False):
         print('here1')
         if correct or if_pass:
