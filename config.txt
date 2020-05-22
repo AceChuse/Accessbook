@@ -1,0 +1,2 @@
+numNewCards: 20
+cardfiles: toeflJuxin.xlsx, words.xlsx
