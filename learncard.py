@@ -262,7 +262,9 @@ class LearnNewCards(QWidget, Ui_Form):
         self.dealResult(correct, score, if_pass)
 
     def label_5_setText(self, **kwargs):
-        kwargs['time'] = kwargs['time'].strftime('%Y/%m/%d %H:%M:%S')
+        date = kwargs.get('date')
+        if date is None: kwargs['time'] = kwargs['time'].strftime('%Y/%m/%d %H:%M:%S')
+        else: kwargs['date'] = date.strftime('%Y/%m/%d %H:%M:%S')
         self.label_5.setText(str(kwargs))
 
     def dealResult(self, correct, score, if_pass = False):
